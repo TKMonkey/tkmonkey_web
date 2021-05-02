@@ -94,20 +94,17 @@ class _LogoName extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Transform.rotate(
-          angle: math.pi / 6,
-          child: SvgPicture.asset(
-            Assets.imageLogoApp,
-            width: 50,
-          ),
+        SvgPicture.asset(
+          Assets.imageLogoApp,
+          width: 50,
         ),
         RichText(
           text: TextSpan(
-              text: 'Piper',
+              text: 'TheKoding',
               style: Theme.of(context).textTheme.headline3,
               children: [
                 TextSpan(
-                  text: 'Lab',
+                  text: 'Monkey',
                   style: Theme.of(context)
                       .textTheme
                       .headline3!
