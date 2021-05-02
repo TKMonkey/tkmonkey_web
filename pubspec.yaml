@@ -1,0 +1,46 @@
+name: tkmonkey_web
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # UI
+  google_fonts: ^2.0.0
+  flutter_svg: ^0.21.0-nullsafety.0
+  argo:
+    git:
+      url: git://github.com/jamescardona11/argo.git
+      ref: dev
+
+
+  #State management
+  state_notifier: ^0.7.0
+  flutter_hooks: ^0.16.0
+  hooks_riverpod: ^0.13.1
+
+  #dataclass
+  uuid: ^3.0.1
+  freezed_annotation: ^0.14.0
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^1.11.5
+  very_good_analysis: ^2.0.0
+  freezed: ^0.14.0+1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icons/
+    - assets/images/
+
+
+scripts: derry.yaml
