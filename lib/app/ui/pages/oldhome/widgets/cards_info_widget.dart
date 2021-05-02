@@ -21,13 +21,13 @@ class CardsInfoWidget extends StatelessWidget {
               if (info.screenSize.width < 1050) {
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: cards,
+                  children: _cards,
                 );
               }
 
               return Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: cards,
+                children: _cards,
               );
             },
           ),
@@ -36,20 +36,20 @@ class CardsInfoWidget extends StatelessWidget {
     );
   }
 
-  final cards = const [
-    _CardHomePage(
-      title: 'Mobile Developer',
-      subTitle: 'Flutter, Android and iOS Native',
-    ),
-    _CardHomePage(
-      title: 'App Creator',
-      subTitle: 'Create apps for you',
-    ),
-    _CardHomePage(
-      title: 'Freelance',
-      subTitle: 'You can hire me now',
-    ),
-  ];
+  List<Widget> get _cards => const [
+        _CardHomePage(
+          title: 'Mobile Developer',
+          subTitle: 'Flutter, Android and iOS Native',
+        ),
+        _CardHomePage(
+          title: 'App Creator',
+          subTitle: 'Create apps for you',
+        ),
+        _CardHomePage(
+          title: 'Freelance',
+          subTitle: 'You can hire me now',
+        ),
+      ];
 }
 
 class _CardHomePage extends StatelessWidget {

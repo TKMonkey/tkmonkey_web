@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:tkmonkey_web/config/values/values.dart';
 
-class DescriptionHomeWidget extends StatelessWidget {
-  final _email = 'me@piperlab.co';
-  final _linkedin = '@jamescardona11';
+const _email = 'me@piperlab.co';
+const _linkedin = '@jamescardona11';
 
+class DescriptionHomeWidget extends StatelessWidget {
   const DescriptionHomeWidget({
     Key? key,
   }) : super(key: key);
@@ -55,7 +55,7 @@ class DescriptionHomeWidget extends StatelessWidget {
             children: [
               ElevatedButton(
                 onPressed: () {},
-                style: ElevatedButton.styleFrom(primary: kGreenColor),
+                style: ElevatedButton.styleFrom(primary: kYellowColor),
                 child: const Text('Download CV'),
               ),
               kSpaceSmallHorizontal,

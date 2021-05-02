@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:tkmonkey_web/app/ui/core/widgets/header_widget.dart';
 
-import 'home_content_view.dart';
+import 'old_home_content_view.dart';
 
-class HomeView extends StatelessWidget {
+class OldHomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
