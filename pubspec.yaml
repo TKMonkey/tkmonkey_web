@@ -17,6 +17,10 @@ dependencies:
     git:
       url: git://github.com/jamescardona11/argo.git
       ref: dev
+  tale_drawer:
+    git:
+      url: git://github.com/tkmonkey/tale_drawer.git
+      ref: main
 
 
   #State management
@@ -27,6 +31,8 @@ dependencies:
   #dataclass
   uuid: ^3.0.1
   freezed_annotation: ^0.14.0
+
+
 
 
 dev_dependencies:

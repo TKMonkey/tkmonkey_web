@@ -24,7 +24,7 @@ class HeaderItemState extends StateNotifier<List<HeaderItem>> {
 final headerItemListProvider = StateNotifierProvider<HeaderItemState>((_) {
   return HeaderItemState([
     HeaderItem(id: _uuid.v4(), title: 'Home', route: '/home', isSelected: true),
-    HeaderItem(id: _uuid.v4(), title: 'About Me', route: '/aboutme'),
+    HeaderItem(id: _uuid.v4(), title: 'About Us', route: '/about-us'),
     HeaderItem(id: _uuid.v4(), title: 'Projects', route: '/projects'),
     HeaderItem(id: _uuid.v4(), title: 'Skills', route: '/skills'),
     HeaderItem(id: _uuid.v4(), title: 'Get In Touch', route: '/getintouch')

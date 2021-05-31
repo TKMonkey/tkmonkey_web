@@ -12,7 +12,8 @@ final commonThemeData = ThemeData(
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       minimumSize: const Size(110, 40),
-      textStyle: GoogleFonts.openSans(fontSize: 12, fontWeight: FontWeight.w500),
+      textStyle:
+          GoogleFonts.openSans(fontSize: 12, fontWeight: FontWeight.w500),
     ),
   ),
 );

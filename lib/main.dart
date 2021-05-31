@@ -2,7 +2,7 @@ import 'package:argo/argo.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'app/ui/pages/oldhome/old_home_view.dart';
+import 'app/ui/pages/home/home_page.dart';
 import 'config/theme/app_theme.dart';
 import 'config/theme/web_theme.dart';
 
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         child: child!,
       ),
       home: ResponsiveWrapper(
-        child: OldHomeView(),
+        child: HomePage(),
       ),
     );
   }

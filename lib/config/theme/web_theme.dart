@@ -4,7 +4,7 @@ import 'common_theme_data.dart';
 
 class WebTheme with IThemeDataRule {
   @override
-  ThemeData getThemeByRule({ThemeRule rule = ThemeRule.dark}) {
+  ThemeData getThemeByRule([ThemeRule rule = ThemeRule.dark]) {
     return commonThemeData.copyWith(
       textTheme: TextTheme(
         headline1: headline1.copyWith(fontSize: 18),
