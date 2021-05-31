@@ -28,8 +28,8 @@ final headline2 = GoogleFonts.notoSans(
   fontWeight: FontWeight.w700,
 );
 
-final headline3 = GoogleFonts.fugazOne(
-  color: kBlackColor,
+final headline3 = GoogleFonts.monda(
+  color: kCreamColor,
   fontWeight: FontWeight.w300,
 );
 
@@ -48,7 +48,9 @@ final subtitle1 = GoogleFonts.notoSans(
   fontWeight: FontWeight.w800,
 );
 
-final subtitle2 = GoogleFonts.notoSans(
+final subtitle2 = GoogleFonts.delius(
   color: kLightGrayColor,
   fontWeight: FontWeight.w500,
 );
+
+//gugi

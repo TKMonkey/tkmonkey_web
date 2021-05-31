@@ -30,6 +30,10 @@ class PointsDecorationWidget extends StatelessWidget {
         color: color,
         colors: colors,
       ),
+      child: SizedBox(
+        width: delta * (quantityX + 1),
+        height: delta * (quantityY + 1),
+      ),
     );
   }
 }
