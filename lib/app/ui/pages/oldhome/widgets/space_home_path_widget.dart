@@ -13,7 +13,7 @@ class SpaceHomePathWidget extends StatelessWidget {
       right: 0,
       bottom: 0,
       child: SvgPicture.asset(
-        Assets.imageSpaceImage1,
+        AssetsManager.imageSpaceImage1,
         width: 600,
       ),
     );

@@ -11,8 +11,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
+        fit: StackFit.expand,
         children: [
-          const TKMTitleWidget(),
+          Align(
+            alignment: Alignment.topLeft,
+            child: const TKMTitleWidget(),
+          ),
           const Align(
             alignment: Alignment.topRight,
             child: EndDecorationWidget(size: 120),

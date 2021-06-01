@@ -31,7 +31,8 @@ class HeaderContainerWidget extends StatelessWidget {
   }
 }
 
-class _HeaderForSmallScreenWidget extends StatelessWidget implements PreferredSizeWidget {
+class _HeaderForSmallScreenWidget extends StatelessWidget
+    implements PreferredSizeWidget {
   @override
   Size get preferredSize => const Size.fromHeight(kSizeHeaderBar);
 
@@ -93,7 +94,7 @@ class _LogoName extends StatelessWidget {
     return Row(
       children: [
         SvgPicture.asset(
-          Assets.imageLogoApp,
+          AssetsManager.imageLogoApp,
           width: 50,
         ),
         RichText(
@@ -126,7 +127,8 @@ class _MenuItemList extends HookWidget {
       itemCount: headerItems.length,
       scrollDirection: Axis.horizontal,
       shrinkWrap: true,
-      itemBuilder: (context, index) => _HeaderItemWidget(item: headerItems[index]),
+      itemBuilder: (context, index) =>
+          _HeaderItemWidget(item: headerItems[index]),
     );
   }
 }
