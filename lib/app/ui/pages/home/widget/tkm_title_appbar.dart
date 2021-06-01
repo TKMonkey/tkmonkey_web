@@ -11,31 +11,37 @@ class TKMTitleWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const PointsDecorationWidget(
-          quantityX: 2,
-          quantityY: 2,
-          delta: 15,
-          colors: [
-            kYellowColor,
-            kCreamColor,
-            kCreamColor,
-            kYellowColor,
-          ],
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 12.0),
+          child: PointsDecorationWidget(
+            quantityX: 2,
+            quantityY: 2,
+            delta: 15,
+            colors: [
+              kYellowColor,
+              kCreamColor,
+              kCreamColor,
+              kYellowColor,
+            ],
+          ),
         ),
-        RichText(
-          text: TextSpan(
-              text: 'TheKoding',
-              style: Theme.of(context).textTheme.headline3,
-              children: [
-                TextSpan(
-                  text: 'Monkey',
-                  style: Theme.of(context)
-                      .textTheme
-                      .headline3!
-                      .copyWith(color: kPrimaryColor),
-                )
-              ]),
-        )
+        Padding(
+          padding: const EdgeInsets.only(top: 12.0),
+          child: RichText(
+            text: TextSpan(
+                text: 'TheKoding',
+                style: Theme.of(context).textTheme.headline3,
+                children: [
+                  TextSpan(
+                    text: 'Monkey',
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline3!
+                        .copyWith(color: kPrimaryColor),
+                  )
+                ]),
+          ),
+        ),
       ],
     );
   }
