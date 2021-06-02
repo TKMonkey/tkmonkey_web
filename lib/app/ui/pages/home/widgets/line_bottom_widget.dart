@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:argo/argo.dart';
 import 'package:tkmonkey_web/config/values/values.dart';
 
 class LineBottomWidget extends StatelessWidget {
@@ -11,10 +11,9 @@ class LineBottomWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return Container(
-      width: size.width,
-      height: 25,
+      width: context.widthPx,
+      height: 35,
       margin: const EdgeInsets.only(bottom: 20),
       child: Center(
         child: Stack(
@@ -22,7 +21,7 @@ class LineBottomWidget extends StatelessWidget {
             Align(
               alignment: Alignment.centerRight,
               child: SizedBox(
-                width: size.width,
+                width: context.widthPx,
                 child: CustomPaint(
                   painter: _DashLinePainter(),
                 ),
@@ -30,19 +29,29 @@ class LineBottomWidget extends StatelessWidget {
             ),
             Positioned(
               right: 80,
-              child: SizedBox(
-                height: 25,
-                child: ColoredBox(
-                  color: kBlackColor,
+              child: Container(
+                height: 35,
+                width: 100,
+                decoration: const BoxDecoration(
+                  color: kPrimaryColor,
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(5.0),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset(AssetsManager.githubLogo),
+                      Image.asset(AssetsManager.githubLogo,
+                          width: 30, height: 30),
                       const SizedBox(width: 10),
-                      SvgPicture.asset(
-                        AssetsManager.imageLogoApp,
-                        width: 25,
-                        height: 25,
-                      )
+                      Image.asset(AssetsManager.pubLogo, width: 30, height: 30),
+                      // SvgPicture.asset(
+                      //   AssetsManager.imageLogoApp,
+                      //   width: 25,
+                      //   height: 25,
+                      // ),
                     ],
                   ),
                 ),
@@ -65,8 +74,8 @@ class _DashLinePainter extends CustomPainter {
 
   final Color color;
   final double dashSpace;
-  final double width;
   final double dashWidth;
+  final double width;
 
   @override
   void paint(Canvas canvas, Size size) {

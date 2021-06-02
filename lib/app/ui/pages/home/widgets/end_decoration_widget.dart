@@ -19,11 +19,14 @@ class EndDecorationWidget extends StatelessWidget {
         children: [
           Positioned(
             right: 0,
-            child: SizedBox(
+            child: Container(
               width: size / 2,
               height: size / 2,
-              child: const ColoredBox(
+              decoration: const BoxDecoration(
                 color: kPrimaryColor,
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(4),
+                ),
               ),
             ),
           ),

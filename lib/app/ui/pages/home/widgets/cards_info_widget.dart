@@ -11,26 +11,26 @@ class CardsInfoWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Positioned(
       left: 0,
-      bottom: 0,
+      bottom: context.heightPct(10),
       child: SizedBox(
         width: context.widthPx,
-        child: Padding(
-          padding: getPaddingMainPages(context),
-          child: ResponsiveBuilder(
-            builder: (ctx, info) {
-              if (info.screenSize.width < 1050) {
-                return Column(
+        child: ResponsiveBuilder(
+          builder: (ctx, info) {
+            if (info.screenSize.width < 850) {
+              return Padding(
+                padding: const EdgeInsets.only(left: 100),
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: _cards,
-                );
-              }
-
-              return Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: _cards,
+                ),
               );
-            },
-          ),
+            }
+
+            return Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: _cards,
+            );
+          },
         ),
       ),
     );
@@ -47,7 +47,7 @@ class CardsInfoWidget extends StatelessWidget {
         ),
         _CardHomePage(
           title: 'Freelance',
-          subTitle: 'You can hire me now',
+          subTitle: 'You can hire us now',
         ),
       ];
 }
@@ -66,15 +66,17 @@ class _CardHomePage extends StatelessWidget {
     return Card(
       elevation: 2,
       child: Container(
-        height: 70,
-        width: context.widthPx < 450 ? context.widthPx : 250,
-        margin: const EdgeInsets.symmetric(horizontal: kSpaceBig),
+        height: 60,
+        width: context.widthPx < 450 ? context.widthPx : 220,
+        margin: const EdgeInsets.symmetric(horizontal: kSpaceSmall),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(
               padding: const EdgeInsets.all(4),
-              decoration: const BoxDecoration(color: kGrayColor, shape: BoxShape.circle),
+              decoration: const BoxDecoration(
+                color: kGrayColor,
+                shape: BoxShape.circle,
+              ),
               child: const Icon(
                 Icons.done,
                 color: Colors.white,
@@ -85,8 +87,14 @@ class _CardHomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(title, style: Theme.of(context).textTheme.subtitle1),
-                Text(subTitle, style: Theme.of(context).textTheme.subtitle2),
+                Text(
+                  title,
+                  style: Theme.of(context).textTheme.subtitle1,
+                ),
+                Text(
+                  subTitle,
+                  style: Theme.of(context).textTheme.subtitle2,
+                ),
               ],
             ),
           ],

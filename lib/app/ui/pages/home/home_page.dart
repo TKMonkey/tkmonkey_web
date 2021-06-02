@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:argo/argo.dart';
 
 import 'widgets/widgets.dart';
 
@@ -25,6 +26,12 @@ class HomePage extends StatelessWidget {
             alignment: Alignment.bottomCenter,
             child: LineBottomWidget(),
           ),
+          // Positioned(
+          //   top: context.heightPct(22),
+          //   left: context.widthPct(22),
+          //   child: LogoWidget(),
+          // ),
+          CardsInfoWidget()
         ],
       ),
     );
