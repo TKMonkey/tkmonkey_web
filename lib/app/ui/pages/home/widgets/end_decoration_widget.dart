@@ -70,8 +70,9 @@ class _WrapperPointsWidget extends StatelessWidget {
       quantityX: 3,
       quantityY: 3,
       radius: 1.8,
-      delta: 14,
+      delta: 10,
       color: color,
+      padding: false,
     );
   }
 }

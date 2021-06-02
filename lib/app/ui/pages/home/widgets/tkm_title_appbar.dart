@@ -16,7 +16,8 @@ class TKMTitleWidget extends StatelessWidget {
           child: PointsDecorationWidget(
             quantityX: 2,
             quantityY: 2,
-            delta: 15,
+            radius: 6,
+            delta: 5,
             colors: [
               kYellowColor,
               kCreamColor,

@@ -6,6 +6,7 @@ class PointsDecorationWidget extends StatelessWidget {
     Key? key,
     required this.quantityX,
     required this.quantityY,
+    this.padding = true,
     this.radius = 5,
     this.delta = 20,
     this.color = kPrimaryColor,
@@ -14,6 +15,7 @@ class PointsDecorationWidget extends StatelessWidget {
 
   final int quantityX;
   final int quantityY;
+  final bool padding;
   final double radius;
   final double delta;
   final Color color;
@@ -21,18 +23,26 @@ class PointsDecorationWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomPaint(
-      painter: _PointsPainter(
-        quantityX: quantityX,
-        quantityY: quantityY,
-        delta: delta,
-        radius: radius,
-        color: color,
-        colors: colors,
-      ),
-      child: SizedBox(
-        width: delta * quantityX,
-        height: delta * quantityY,
+    final sizeX = delta * (quantityX - 1) + 2 * radius * quantityX;
+    final sizeY = delta * (quantityY - 1) + 2 * radius * quantityY;
+
+    return Padding(
+      padding: padding ? const EdgeInsets.all(8.0) : EdgeInsets.zero,
+      child: Container(
+        color: Colors.red,
+        child: SizedBox.fromSize(
+          size: Size(sizeX, sizeY),
+          child: CustomPaint(
+            painter: _PointsPainter(
+              quantityX: quantityX,
+              quantityY: quantityY,
+              delta: delta,
+              radius: radius,
+              color: color,
+              colors: colors,
+            ),
+          ),
+        ),
       ),
     );
   }
@@ -70,7 +80,11 @@ class _PointsPainter extends CustomPainter {
       if (colors?.isNotEmpty == true) {
         paint.color = colors![i];
       }
-      final offset = Offset(delta * (x + 1), delta * (y + 1));
+
+      final centerX = radius + (delta + 2 * radius) * x;
+      final centerY = radius + (delta + 2 * radius) * y;
+
+      final offset = Offset(centerX, centerY);
       canvas.drawCircle(offset, radius, paint);
       x++;
 

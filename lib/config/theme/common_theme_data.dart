@@ -12,19 +12,22 @@ final commonThemeData = ThemeData(
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       minimumSize: const Size(110, 40),
-      textStyle:
-          GoogleFonts.openSans(fontSize: 12, fontWeight: FontWeight.w500),
+      onPrimary: kBlackColor,
+      textStyle: GoogleFonts.notoSans(
+        fontSize: 13,
+        fontWeight: FontWeight.w600,
+      ),
     ),
   ),
 );
 
 final headline1 = GoogleFonts.notoSans(
-  color: kWhiteColor,
+  color: kCreamColor,
   fontWeight: FontWeight.w800,
 );
 
 final headline2 = GoogleFonts.notoSans(
-  color: kWhiteColor,
+  color: kCreamColor,
   fontWeight: FontWeight.w700,
 );
 
@@ -39,7 +42,7 @@ final headline4 = GoogleFonts.notoSans(
 );
 
 final headline5 = GoogleFonts.fugazOne(
-  color: kGrayColor.withOpacity(0.4),
+  color: kGrayColor.withOpacity(0.3),
   fontWeight: FontWeight.w300,
 );
 

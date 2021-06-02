@@ -6,6 +6,7 @@ const double kSpaceBig = 30;
 const double kSpaceSmall = 20;
 
 const kSpaceBigVertical = SizedBox(height: kSpaceBig);
+const kSpaceSmallVertical = SizedBox(height: kSpaceSmall);
 const kSpaceSmallHorizontal = SizedBox(width: 10);
 
 EdgeInsets getPaddingMainPages(BuildContext context) {

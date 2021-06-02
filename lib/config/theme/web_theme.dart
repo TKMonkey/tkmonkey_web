@@ -8,7 +8,10 @@ class WebTheme with IThemeDataRule {
     return commonThemeData.copyWith(
       textTheme: TextTheme(
         headline1: headline1.copyWith(fontSize: 18),
-        headline2: headline2.copyWith(fontSize: 14),
+        headline2: headline2.copyWith(
+          fontSize: 14,
+          height: 3,
+        ),
         headline3: headline3.copyWith(fontSize: 28),
         headline4: headline4.copyWith(fontSize: 28),
         headline5: headline5.copyWith(fontSize: 96),
