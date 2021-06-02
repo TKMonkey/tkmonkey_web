@@ -65,6 +65,7 @@ class _CardHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 2,
+      color: kCreamColor,
       child: Container(
         height: 60,
         width: context.widthPx < 450 ? context.widthPx : 220,
@@ -79,7 +80,7 @@ class _CardHomePage extends StatelessWidget {
               ),
               child: const Icon(
                 Icons.done,
-                color: Colors.white,
+                color: kCreamColor,
               ),
             ),
             kSpaceSmallHorizontal,

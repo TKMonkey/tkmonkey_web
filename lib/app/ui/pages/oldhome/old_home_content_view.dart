@@ -21,7 +21,7 @@ class HomeContentView extends StatelessWidget {
             ],
           ),
         ),
-        const CardsInfoWidget(),
+        // const CardsInfoWidget(),
       ],
     );
   }

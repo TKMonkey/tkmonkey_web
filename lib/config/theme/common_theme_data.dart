@@ -19,12 +19,12 @@ final commonThemeData = ThemeData(
 );
 
 final headline1 = GoogleFonts.notoSans(
-  color: kBlackColor,
+  color: kWhiteColor,
   fontWeight: FontWeight.w800,
 );
 
 final headline2 = GoogleFonts.notoSans(
-  color: kLightGrayColor,
+  color: kWhiteColor,
   fontWeight: FontWeight.w700,
 );
 
@@ -39,7 +39,7 @@ final headline4 = GoogleFonts.notoSans(
 );
 
 final headline5 = GoogleFonts.fugazOne(
-  color: kGrayColor.withOpacity(0.1),
+  color: kGrayColor.withOpacity(0.4),
   fontWeight: FontWeight.w300,
 );
 

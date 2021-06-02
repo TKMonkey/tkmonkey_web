@@ -8,7 +8,6 @@ class TitleGrayWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FittedBox(
-      fit: BoxFit.contain,
       child: Text(
         'TKMonkey',
         style: Theme.of(context).textTheme.headline5,

@@ -33,7 +33,7 @@ class LineBottomWidget extends StatelessWidget {
                 height: 35,
                 width: 100,
                 decoration: const BoxDecoration(
-                  color: kPrimaryColor,
+                  color: kCreamColor,
                   borderRadius: BorderRadius.all(
                     Radius.circular(4),
                   ),
