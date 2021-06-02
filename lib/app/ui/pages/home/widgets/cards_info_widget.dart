@@ -42,12 +42,12 @@ class CardsInfoWidget extends StatelessWidget {
           subTitle: 'Flutter, Android and iOS Native',
         ),
         _CardHomePage(
-          title: 'App Creator',
-          subTitle: 'Create apps for you',
+          title: 'O.S.O',
+          subTitle: 'We love open source',
         ),
         _CardHomePage(
-          title: 'Freelance',
-          subTitle: 'You can hire us now',
+          title: 'Open to projects',
+          subTitle: 'Contact to us',
         ),
       ];
 }
@@ -68,7 +68,7 @@ class _CardHomePage extends StatelessWidget {
       color: kCreamColor,
       child: Container(
         height: 60,
-        width: context.widthPx < 450 ? context.widthPx : 220,
+        width: context.widthPx < 450 ? context.widthPx : 230,
         margin: const EdgeInsets.symmetric(horizontal: kSpaceSmall),
         child: Row(
           children: [

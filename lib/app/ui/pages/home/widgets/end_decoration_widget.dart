@@ -35,15 +35,19 @@ class EndDecorationWidget extends StatelessWidget {
             right: 25,
             child: Column(
               children: [
+                const SizedBox(height: 14),
                 Row(
                   children: const [
                     _WrapperPointsWidget(),
+                    SizedBox(width: 12),
                     _WrapperPointsWidget(color: kBlackColor),
                   ],
                 ),
+                const SizedBox(height: 10),
                 Row(
                   children: const [
                     _WrapperPointsWidget(),
+                    SizedBox(width: 12),
                     _WrapperPointsWidget(),
                   ],
                 ),
@@ -70,7 +74,7 @@ class _WrapperPointsWidget extends StatelessWidget {
       quantityX: 3,
       quantityY: 3,
       radius: 1.8,
-      delta: 10,
+      delta: 12,
       color: color,
       padding: false,
     );

@@ -13,6 +13,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = context.textTheme;
+
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,
@@ -38,8 +40,8 @@ class HomePage extends StatelessWidget {
                 PointsDecorationWidget(
                   quantityX: 2,
                   quantityY: 2,
-                  delta: -30,
-                  radius: 45,
+                  delta: -42,
+                  radius: 70,
                 ),
                 Stack(
                   children: [
@@ -52,34 +54,35 @@ class HomePage extends StatelessWidget {
                       children: [
                         Text(
                           'Hello World!',
-                          style: Theme.of(context)
-                              .textTheme
-                              .headline1!
-                              .copyWith(fontSize: 35),
+                          style: theme.headline1!.copyWith(fontSize: 35),
                         ),
-                        Text(
-                          "We're a OpenSource team.\nThe main goal with this project\nis create awesome libraries and contribute to the comunity.",
-                          style: Theme.of(context).textTheme.headline2,
+                        RichText(
+                          text: TextSpan(
+                            text: "We're a ",
+                            style: theme.headline2,
+                            children: [
+                              TextSpan(
+                                text: 'OpenSource',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .headline2!
+                                    .copyWith(color: kPrimaryColor),
+                              ),
+                              TextSpan(
+                                text:
+                                    ' team.\nThe main goal of this project\nis to create awesome libraries and contribute to the community.',
+                                style: theme.headline2,
+                              )
+                            ],
+                          ),
                         ),
                         const SizedBox(height: 10),
-                        Row(
-                          children: [
-                            ElevatedButton(
-                              onPressed: () {},
-                              style: ElevatedButton.styleFrom(
-                                primary: kYellowColor,
-                              ),
-                              child: const Text('Download CV'),
-                            ),
-                            kSpaceSmallHorizontal,
-                            ElevatedButton(
-                              onPressed: () {},
-                              style: ElevatedButton.styleFrom(
-                                primary: kWhiteColor,
-                              ),
-                              child: const Text('Hire Me Now'),
-                            ),
-                          ],
+                        ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            primary: kCreamColor,
+                          ),
+                          child: const Text('Projects'),
                         )
                       ],
                     ),

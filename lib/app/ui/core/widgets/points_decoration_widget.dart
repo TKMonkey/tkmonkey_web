@@ -28,19 +28,16 @@ class PointsDecorationWidget extends StatelessWidget {
 
     return Padding(
       padding: padding ? const EdgeInsets.all(8.0) : EdgeInsets.zero,
-      child: Container(
-        color: Colors.red,
-        child: SizedBox.fromSize(
-          size: Size(sizeX, sizeY),
-          child: CustomPaint(
-            painter: _PointsPainter(
-              quantityX: quantityX,
-              quantityY: quantityY,
-              delta: delta,
-              radius: radius,
-              color: color,
-              colors: colors,
-            ),
+      child: SizedBox.fromSize(
+        size: Size(sizeX, sizeY),
+        child: CustomPaint(
+          painter: _PointsPainter(
+            quantityX: quantityX,
+            quantityY: quantityY,
+            delta: delta,
+            radius: radius,
+            color: color,
+            colors: colors,
           ),
         ),
       ),

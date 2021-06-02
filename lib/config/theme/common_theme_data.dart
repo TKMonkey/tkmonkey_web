@@ -14,7 +14,7 @@ final commonThemeData = ThemeData(
       minimumSize: const Size(110, 40),
       onPrimary: kBlackColor,
       textStyle: GoogleFonts.notoSans(
-        fontSize: 13,
+        fontSize: 14,
         fontWeight: FontWeight.w600,
       ),
     ),
@@ -28,7 +28,7 @@ final headline1 = GoogleFonts.notoSans(
 
 final headline2 = GoogleFonts.notoSans(
   color: kCreamColor,
-  fontWeight: FontWeight.w700,
+  fontWeight: FontWeight.w500,
 );
 
 final headline3 = GoogleFonts.monda(
@@ -52,8 +52,8 @@ final subtitle1 = GoogleFonts.notoSans(
 );
 
 final subtitle2 = GoogleFonts.delius(
-  color: kLightGrayColor,
-  fontWeight: FontWeight.w500,
+  color: kGrayColor,
+  fontWeight: FontWeight.w400,
 );
 
 //gugi
