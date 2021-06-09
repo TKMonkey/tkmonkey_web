@@ -41,14 +41,14 @@ mixin _$HeaderItem {
   bool get isSelected => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $HeaderItemCopyWith<HeaderItem> get copyWith =>
+  $HeaderItemCopyWith<HeaderItemUIM> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $HeaderItemCopyWith<$Res> {
   factory $HeaderItemCopyWith(
-          HeaderItem value, $Res Function(HeaderItem) then) =
+          HeaderItemUIM value, $Res Function(HeaderItemUIM) then) =
       _$HeaderItemCopyWithImpl<$Res>;
   $Res call({String id, String title, String? route, bool isSelected});
 }
@@ -57,9 +57,9 @@ abstract class $HeaderItemCopyWith<$Res> {
 class _$HeaderItemCopyWithImpl<$Res> implements $HeaderItemCopyWith<$Res> {
   _$HeaderItemCopyWithImpl(this._value, this._then);
 
-  final HeaderItem _value;
+  final HeaderItemUIM _value;
   // ignore: unused_field
-  final $Res Function(HeaderItem) _then;
+  final $Res Function(HeaderItemUIM) _then;
 
   @override
   $Res call({
@@ -199,7 +199,7 @@ class _$_HeaderItem with DiagnosticableTreeMixin implements _HeaderItem {
       __$HeaderItemCopyWithImpl<_HeaderItem>(this, _$identity);
 }
 
-abstract class _HeaderItem implements HeaderItem {
+abstract class _HeaderItem implements HeaderItemUIM {
   const factory _HeaderItem(
       {required String id,
       required String title,

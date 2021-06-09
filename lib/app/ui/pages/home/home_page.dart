@@ -71,7 +71,7 @@ class HomePage extends StatelessWidget {
                               ),
                               TextSpan(
                                 text:
-                                    ' team.\nThe main goal of this project\nis to create awesome libraries and contribute to the community.',
+                                    ' team.\nThe goal is to create awesome libraries,\nand contribute to the community.',
                                 style: theme.headline2,
                               )
                             ],

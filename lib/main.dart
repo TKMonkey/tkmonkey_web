@@ -1,6 +1,7 @@
 import 'package:argo/argo.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:tkmonkey_web/app/ui/index/index_page.dart';
 
 import 'app/ui/pages/home/home_page.dart';
 import 'config/theme/app_theme.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         child: child!,
       ),
       home: ResponsiveWrapper(
-        child: HomePage(),
+        child: IndexPage(),
       ),
     );
   }

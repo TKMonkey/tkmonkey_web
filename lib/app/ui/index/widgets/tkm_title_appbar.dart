@@ -9,35 +9,39 @@ class TKMTitleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        const PointsDecorationWidget(
-          quantityX: 2,
-          quantityY: 2,
-          radius: 6,
-          delta: 5,
-          colors: [
-            kYellowColor,
-            kCreamColor,
-            kCreamColor,
-            kYellowColor,
-          ],
-        ),
-        RichText(
-          text: TextSpan(
-              text: 'TheKoding',
-              style: Theme.of(context).textTheme.headline3,
-              children: [
-                TextSpan(
-                  text: 'Monkey',
-                  style: Theme.of(context)
-                      .textTheme
-                      .headline3!
-                      .copyWith(color: kPrimaryColor),
-                )
-              ]),
-        ),
-      ],
+    return SizedBox(
+      height: kSizeHeaderBar,
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const PointsDecorationWidget(
+            quantityX: 2,
+            quantityY: 2,
+            radius: 6,
+            delta: 5,
+            colors: [
+              kYellowColor,
+              kCreamColor,
+              kCreamColor,
+              kYellowColor,
+            ],
+          ),
+          RichText(
+            text: TextSpan(
+                text: 'TheKoding',
+                style: Theme.of(context).textTheme.headline3,
+                children: [
+                  TextSpan(
+                    text: 'Monkey',
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline3!
+                        .copyWith(color: kPrimaryColor),
+                  )
+                ]),
+          ),
+        ],
+      ),
     );
   }
 }

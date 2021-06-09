@@ -1,14 +1,14 @@
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'header_item.freezed.dart';
+part 'header_item_uim.freezed.dart';
 
 @freezed
-class HeaderItem with _$HeaderItem {
-  const factory HeaderItem({
+class HeaderItemUIModel with _$HeaderItemUIModel {
+  const factory HeaderItemUIModel({
     required String id,
     required String title,
     String? route,
     @Default(false) bool isSelected,
-  }) = _HeaderItem;
+  }) = _HeaderItemUIModel;
 }

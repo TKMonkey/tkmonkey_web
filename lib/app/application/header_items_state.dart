@@ -1,12 +1,14 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:state_notifier/state_notifier.dart';
-import 'package:tkmonkey_web/app/ui/core/viewmodels/header_item.dart';
+import 'package:tkmonkey_web/app/ui/core/uimodels/header_item_uim.dart';
+
 import 'package:uuid/uuid.dart';
 
 const _uuid = Uuid();
 
-class HeaderItemState extends StateNotifier<List<HeaderItem>> {
-  HeaderItemState([List<HeaderItem>? initialState]) : super(initialState ?? []);
+class HeaderItemState extends StateNotifier<List<HeaderItemUIModel>> {
+  HeaderItemState([List<HeaderItemUIModel>? initialState])
+      : super(initialState ?? []);
 
   void toggle(String id) {
     state = [
@@ -18,15 +20,17 @@ class HeaderItemState extends StateNotifier<List<HeaderItem>> {
     ];
   }
 
-  List<HeaderItem> get currentState => state;
+  List<HeaderItemUIModel> get currentState => state;
 }
 
 final headerItemListProvider = StateNotifierProvider<HeaderItemState>((_) {
   return HeaderItemState([
-    HeaderItem(id: _uuid.v4(), title: 'Home', route: '/home', isSelected: true),
-    HeaderItem(id: _uuid.v4(), title: 'About Us', route: '/about-us'),
-    HeaderItem(id: _uuid.v4(), title: 'Projects', route: '/projects'),
-    HeaderItem(id: _uuid.v4(), title: 'Skills', route: '/skills'),
-    HeaderItem(id: _uuid.v4(), title: 'Get In Touch', route: '/getintouch')
+    HeaderItemUIModel(
+        id: _uuid.v4(), title: 'Home', route: '/home', isSelected: true),
+    HeaderItemUIModel(id: _uuid.v4(), title: 'Team', route: '/team'),
+    HeaderItemUIModel(id: _uuid.v4(), title: 'Work', route: '/work'),
+    HeaderItemUIModel(id: _uuid.v4(), title: 'About Us', route: '/about-us'),
+    HeaderItemUIModel(
+        id: _uuid.v4(), title: 'Get In Touch', route: '/getintouch')
   ]);
 });

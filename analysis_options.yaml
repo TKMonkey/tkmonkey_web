@@ -2,7 +2,6 @@ include: package:lint/analysis_options.yaml
 
 linter:
   rules: 
-    use_key_in_widget_constructors: true
     prefer_const_constructors: true
     sort_pub_dependencies: false
     constant_identifier_names: false
