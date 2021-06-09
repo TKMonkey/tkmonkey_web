@@ -7,10 +7,13 @@ class TitleGrayWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FittedBox(
-      child: Text(
-        'TKMonkey',
-        style: Theme.of(context).textTheme.headline5,
+    return Align(
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: 100, left: 350),
+        child: Text(
+          'TKMonkey',
+          style: Theme.of(context).textTheme.headline5,
+        ),
       ),
     );
   }

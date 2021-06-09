@@ -6,8 +6,8 @@ import 'package:uuid/uuid.dart';
 
 const _uuid = Uuid();
 
-class HeaderItemState extends StateNotifier<List<HeaderItemUIModel>> {
-  HeaderItemState([List<HeaderItemUIModel>? initialState])
+class IndexHeaderState extends StateNotifier<List<HeaderItemUIModel>> {
+  IndexHeaderState([List<HeaderItemUIModel>? initialState])
       : super(initialState ?? []);
 
   void toggle(String id) {
@@ -23,14 +23,33 @@ class HeaderItemState extends StateNotifier<List<HeaderItemUIModel>> {
   List<HeaderItemUIModel> get currentState => state;
 }
 
-final headerItemListProvider = StateNotifierProvider<HeaderItemState>((_) {
-  return HeaderItemState([
+final indexHeaderProvider = StateNotifierProvider<IndexHeaderState>((_) {
+  return IndexHeaderState([
     HeaderItemUIModel(
-        id: _uuid.v4(), title: 'Home', route: '/home', isSelected: true),
-    HeaderItemUIModel(id: _uuid.v4(), title: 'Team', route: '/team'),
-    HeaderItemUIModel(id: _uuid.v4(), title: 'Work', route: '/work'),
-    HeaderItemUIModel(id: _uuid.v4(), title: 'About Us', route: '/about-us'),
+      id: _uuid.v4(),
+      title: 'Home',
+      route: '/home',
+      isSelected: true,
+    ),
     HeaderItemUIModel(
-        id: _uuid.v4(), title: 'Get In Touch', route: '/getintouch')
+      id: _uuid.v4(),
+      title: 'Team',
+      route: '/team',
+    ),
+    HeaderItemUIModel(
+      id: _uuid.v4(),
+      title: 'Work',
+      route: '/work',
+    ),
+    HeaderItemUIModel(
+      id: _uuid.v4(),
+      title: 'About Us',
+      route: '/about-us',
+    ),
+    HeaderItemUIModel(
+      id: _uuid.v4(),
+      title: 'Get In Touch',
+      route: '/getintouch',
+    )
   ]);
 });

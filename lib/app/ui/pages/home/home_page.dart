@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:argo/argo.dart';
-import 'package:tkmonkey_web/app/ui/core/widgets/points_decoration_widget.dart';
 import 'package:tkmonkey_web/app/ui/pages/home/widgets/title_gray_widget.dart';
-import 'package:tkmonkey_web/config/values/values.dart';
 
 import 'widgets/widgets.dart';
 
@@ -13,86 +10,15 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = context.textTheme;
-
     return Scaffold(
       body: Stack(
-        fit: StackFit.expand,
         children: [
-          // Align(
-          //   alignment: Alignment.topLeft,
-          //   child: const TKMTitleWidget(),
-          // ),
-          const Align(
-            alignment: Alignment.topRight,
-            child: EndDecorationWidget(size: 120),
-          ),
-          const Align(
-            alignment: Alignment.bottomCenter,
-            child: LineBottomWidget(),
-          ),
-          Positioned(
-            top: context.heightPct(22),
-            left: context.widthPct(22),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                PointsDecorationWidget(
-                  quantityX: 2,
-                  quantityY: 2,
-                  delta: -42,
-                  radius: 70,
-                ),
-                const SizedBox(width: 20),
-                Stack(
-                  children: [
-                    Positioned(
-                      right: 0,
-                      child: TitleGrayWidget(),
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Hello World!',
-                          style: theme.headline1!.copyWith(fontSize: 35),
-                        ),
-                        RichText(
-                          text: TextSpan(
-                            text: "We're a ",
-                            style: theme.headline2,
-                            children: [
-                              TextSpan(
-                                text: 'OpenSource',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .headline2!
-                                    .copyWith(color: kPrimaryColor),
-                              ),
-                              TextSpan(
-                                text:
-                                    ' team.\nThe goal is to create awesome libraries,\nand contribute to the community.',
-                                style: theme.headline2,
-                              )
-                            ],
-                          ),
-                        ),
-                        const SizedBox(height: 10),
-                        ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                            primary: kCreamColor,
-                          ),
-                          child: const Text('Projects'),
-                        )
-                      ],
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          CardsInfoWidget(),
+          const EndDecorationWidget(size: 120),
+          const LineBottomWidget(),
+          const TitleGrayWidget(),
+          const CenterInfoWidget(),
+          const CardsInfoWidget(),
+          const CustomBeenPathWidget()
         ],
       ),
     );

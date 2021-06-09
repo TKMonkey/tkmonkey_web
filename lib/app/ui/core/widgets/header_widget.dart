@@ -50,7 +50,7 @@ class _MenuItemList extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final headerItems = useProvider(headerItemListProvider.state);
+    final headerItems = useProvider(indexHeaderProvider.state);
 
     return SizedBox(
       height: kSizeHeaderBar,
@@ -77,7 +77,7 @@ class _HeaderItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        context.read(headerItemListProvider).toggle(item.id);
+        context.read(indexHeaderProvider).toggle(item.id);
       },
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0),

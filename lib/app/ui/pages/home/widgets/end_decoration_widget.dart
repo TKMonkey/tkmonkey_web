@@ -12,49 +12,52 @@ class EndDecorationWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: size,
-      height: size,
-      child: Stack(
-        children: [
-          Positioned(
-            right: 0,
-            child: Container(
-              width: size / 2,
-              height: size / 2,
-              decoration: const BoxDecoration(
-                color: kPrimaryColor,
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(4),
+    return Align(
+      alignment: Alignment.topRight,
+      child: SizedBox(
+        width: size,
+        height: size,
+        child: Stack(
+          children: [
+            Positioned(
+              right: 0,
+              child: Container(
+                width: size / 2,
+                height: size / 2,
+                decoration: const BoxDecoration(
+                  color: kPrimaryColor,
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(4),
+                  ),
                 ),
               ),
             ),
-          ),
-          Positioned(
-            top: 10,
-            right: 25,
-            child: Column(
-              children: [
-                const SizedBox(height: 14),
-                Row(
-                  children: const [
-                    _WrapperPointsWidget(),
-                    SizedBox(width: 12),
-                    _WrapperPointsWidget(color: kBlackColor),
-                  ],
-                ),
-                const SizedBox(height: 10),
-                Row(
-                  children: const [
-                    _WrapperPointsWidget(),
-                    SizedBox(width: 12),
-                    _WrapperPointsWidget(),
-                  ],
-                ),
-              ],
-            ),
-          )
-        ],
+            Positioned(
+              top: 10,
+              right: 25,
+              child: Column(
+                children: [
+                  const SizedBox(height: 14),
+                  Row(
+                    children: const [
+                      _WrapperPointsWidget(),
+                      SizedBox(width: 12),
+                      _WrapperPointsWidget(color: kBlackColor),
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                  Row(
+                    children: const [
+                      _WrapperPointsWidget(),
+                      SizedBox(width: 12),
+                      _WrapperPointsWidget(),
+                    ],
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

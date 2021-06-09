@@ -11,53 +11,57 @@ class LineBottomWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: context.widthPx,
-      height: 35,
-      margin: const EdgeInsets.only(bottom: 20),
-      child: Center(
-        child: Stack(
-          children: [
-            Align(
-              alignment: Alignment.centerRight,
-              child: SizedBox(
-                width: context.widthPx,
-                child: CustomPaint(
-                  painter: _DashLinePainter(),
-                ),
-              ),
-            ),
-            Positioned(
-              right: 80,
-              child: Container(
-                height: 35,
-                width: 100,
-                decoration: const BoxDecoration(
-                  color: kCreamColor,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(4),
-                  ),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(AssetsManager.githubLogo,
-                          width: 30, height: 30),
-                      const SizedBox(width: 10),
-                      Image.asset(AssetsManager.pubLogo, width: 30, height: 30),
-                      // SvgPicture.asset(
-                      //   AssetsManager.imageLogoApp,
-                      //   width: 25,
-                      //   height: 25,
-                      // ),
-                    ],
+    return Align(
+      alignment: Alignment.bottomCenter,
+      child: Container(
+        width: context.widthPx,
+        height: 35,
+        margin: const EdgeInsets.only(bottom: 20),
+        child: Center(
+          child: Stack(
+            children: [
+              Align(
+                alignment: Alignment.centerRight,
+                child: SizedBox(
+                  width: context.widthPx,
+                  child: CustomPaint(
+                    painter: _DashLinePainter(),
                   ),
                 ),
               ),
-            )
-          ],
+              Positioned(
+                right: 80,
+                child: Container(
+                  height: 35,
+                  width: 100,
+                  decoration: const BoxDecoration(
+                    color: kCreamColor,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(4),
+                    ),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(AssetsManager.githubLogo,
+                            width: 30, height: 30),
+                        const SizedBox(width: 10),
+                        Image.asset(AssetsManager.pubLogo,
+                            width: 30, height: 30),
+                        // SvgPicture.asset(
+                        //   AssetsManager.imageLogoApp,
+                        //   width: 25,
+                        //   height: 25,
+                        // ),
+                      ],
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
