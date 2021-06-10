@@ -13,7 +13,7 @@ class CustomBeenPathWidget extends StatelessWidget {
       left: 150,
       child: CustomPaint(
         size: const Size(250, 250),
-        painter: _RPSCustomPainter(kGrayColor.withOpacity(0.1)),
+        painter: _RPSCustomPainter(kGrayColorOpacity),
       ),
     );
   }
@@ -28,14 +28,34 @@ class _RPSCustomPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     final path = Path()
       ..moveTo(size.width * 0.9379195, size.height * 0.6000399)
-      ..cubicTo(size.width * 1.056563, size.height * 0.7418805, size.width * 0.7126366,
-          size.height * 0.9462937, size.width * 0.4347361, size.height * 0.9462937)
-      ..cubicTo(size.width * 0.1568356, size.height * 0.9462937, size.width * -0.03542808,
-          size.height * 0.7879096, size.width * -0.06844727, size.height * 0.6000399)
-      ..cubicTo(size.width * -0.1485075, size.height * 0.1445192, size.width * 0.6136850,
-          size.height * -0.1450072, size.width * 0.4347361, size.height * 0.2537860)
-      ..cubicTo(size.width * 0.1738975, size.height * 0.8350733, size.width * 0.8444857,
-          size.height * 0.4883373, size.width * 0.9379195, size.height * 0.6000399)
+      ..cubicTo(
+          size.width * 1.056563,
+          size.height * 0.7418805,
+          size.width * 0.7126366,
+          size.height * 0.9462937,
+          size.width * 0.4347361,
+          size.height * 0.9462937)
+      ..cubicTo(
+          size.width * 0.1568356,
+          size.height * 0.9462937,
+          size.width * -0.03542808,
+          size.height * 0.7879096,
+          size.width * -0.06844727,
+          size.height * 0.6000399)
+      ..cubicTo(
+          size.width * -0.1485075,
+          size.height * 0.1445192,
+          size.width * 0.6136850,
+          size.height * -0.1450072,
+          size.width * 0.4347361,
+          size.height * 0.2537860)
+      ..cubicTo(
+          size.width * 0.1738975,
+          size.height * 0.8350733,
+          size.width * 0.8444857,
+          size.height * 0.4883373,
+          size.width * 0.9379195,
+          size.height * 0.6000399)
       ..close();
 
     final paint = Paint()

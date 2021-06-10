@@ -42,7 +42,7 @@ final headline4 = GoogleFonts.notoSans(
 );
 
 final headline5 = GoogleFonts.fugazOne(
-  color: kGrayColor.withOpacity(0.3),
+  color: kGrayColorOpacity,
   fontWeight: FontWeight.w300,
 );
 

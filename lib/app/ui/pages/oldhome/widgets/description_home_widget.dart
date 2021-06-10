@@ -22,7 +22,10 @@ class DescriptionHomeWidget extends StatelessWidget {
           ),
           Text(
             _linkedin,
-            style: Theme.of(context).textTheme.headline4!.copyWith(color: kPrimaryColor),
+            style: Theme.of(context)
+                .textTheme
+                .headline4!
+                .copyWith(color: kPrimaryColor),
           ),
           Text(
             'Entrepreneur and developer, looking for new challenges and new experiences.\nA happy mobile app developer with 11 years of work experience.',
@@ -44,7 +47,8 @@ class DescriptionHomeWidget extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Linkedin:', style: Theme.of(context).textTheme.headline1),
+                  Text('Linkedin:',
+                      style: Theme.of(context).textTheme.headline1),
                   Text(_linkedin, style: Theme.of(context).textTheme.headline2)
                 ],
               ),

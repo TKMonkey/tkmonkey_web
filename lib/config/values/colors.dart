@@ -13,8 +13,10 @@ const kWhiteColor = Color(0xFFFFFFFE);
 const kCreamColor = Color(0xFFF4EDDB);
 
 const kGrayColor = Color(0xFF4E4E4B);
+final kGrayColorOpacity = kGrayColor.withOpacity(0.3);
 const kLightGrayColor = Color(0xFFA6A8B4);
-const kLightGrayColor2 = Color(0xFFF6F6F6);
+const kLightGrayColor2 = Color(0xFF838488);
+const kLightGrayColor3 = Color(0xFF4E4E59);
 
 const kBlueColor = Color(0xFF94B9C9);
 
