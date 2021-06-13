@@ -3,14 +3,17 @@ import 'package:argo/argo.dart';
 import 'package:tkmonkey_web/config/values/values.dart';
 
 import 'avatar_widget.dart';
+import 'name_widget.dart';
 
 class CardPersonWidget extends StatelessWidget {
   const CardPersonWidget({
     Key? key,
     required this.name,
+    required this.githubProfile,
   }) : super(key: key);
 
   final String name;
+  final String githubProfile;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +24,7 @@ class CardPersonWidget extends StatelessWidget {
         maxHeight: 300,
       ),
       decoration: BoxDecoration(
-        color: kLightGrayColor3,
+        color: kWhiteColor,
         borderRadius: BorderRadius.circular(10),
       ),
       child: LayoutBuilder(
@@ -34,35 +37,10 @@ class CardPersonWidget extends StatelessWidget {
             NameWidget(
               width: constraints.maxWidth,
               name: name,
+              githubProfile: githubProfile,
             ),
             BioWidget(),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class NameWidget extends StatelessWidget {
-  const NameWidget({
-    Key? key,
-    required this.width,
-    required this.name,
-  }) : super(key: key);
-
-  final double width;
-  final String name;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: width,
-      padding: const EdgeInsets.all(5),
-      color: kWhiteColor,
-      child: Text(
-        name,
-        style: context.textTheme.subtitle1!.copyWith(
-          color: kBlackColor,
         ),
       ),
     );

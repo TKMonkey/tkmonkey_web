@@ -12,9 +12,15 @@ class TeamPage extends StatelessWidget {
       body: Center(
         child: Row(
           children: [
-            CardPersonWidget(name: 'James Cardona'),
+            CardPersonWidget(
+              name: 'James Cardona',
+              githubProfile: 'jamescardona11',
+            ),
             SizedBox(width: 20),
-            CardPersonWidget(name: 'Juan Quintero'),
+            CardPersonWidget(
+              name: 'Juan Quintero',
+              githubProfile: 'juequinterore',
+            ),
           ],
         ),
       ),
