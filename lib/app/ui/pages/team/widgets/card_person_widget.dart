@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:argo/argo.dart';
 import 'package:tkmonkey_web/config/values/values.dart';
 
 import 'avatar_widget.dart';
+import 'bio_widget.dart';
 import 'name_widget.dart';
 
 class CardPersonWidget extends StatelessWidget {
@@ -10,18 +10,21 @@ class CardPersonWidget extends StatelessWidget {
     Key? key,
     required this.name,
     required this.githubProfile,
+    this.linkedinProfile = '',
+    required this.bio,
   }) : super(key: key);
 
   final String name;
   final String githubProfile;
+  final String linkedinProfile;
+  final String bio;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      // padding: const EdgeInsets.all(kSpaceLittle),
-      constraints: BoxConstraints(
+      constraints: const BoxConstraints(
         maxWidth: 200,
-        maxHeight: 300,
+        maxHeight: 350,
       ),
       decoration: BoxDecoration(
         color: kWhiteColor,
@@ -38,23 +41,11 @@ class CardPersonWidget extends StatelessWidget {
               width: constraints.maxWidth,
               name: name,
               githubProfile: githubProfile,
+              linkedinProfile: linkedinProfile,
             ),
-            BioWidget(),
+            BioWidget(bio: bio),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class BioWidget extends StatelessWidget {
-  const BioWidget({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Text('Hello'),
       ),
     );
   }

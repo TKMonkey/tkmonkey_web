@@ -11,4 +11,5 @@ class AssetsManager {
   //ICONS
   static const githubLogo = 'assets/icons/github_logo.png';
   static const pubLogo = 'assets/icons/pub_logo.png';
+  static const linkedinLogo = 'assets/icons/linkedin_logo.png';
 }

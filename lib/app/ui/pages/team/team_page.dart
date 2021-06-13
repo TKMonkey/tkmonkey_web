@@ -15,11 +15,16 @@ class TeamPage extends StatelessWidget {
             CardPersonWidget(
               name: 'James Cardona',
               githubProfile: 'jamescardona11',
+              linkedinProfile: 'jamescardona11',
+              bio:
+                  'Tech explorer | Passionate about sharing explorations around Android and Flutter development and software engineering.',
             ),
             SizedBox(width: 20),
             CardPersonWidget(
               name: 'Juan Quintero',
               githubProfile: 'juequinterore',
+              bio:
+                  'Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever ',
             ),
           ],
         ),

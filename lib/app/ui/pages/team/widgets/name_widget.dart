@@ -9,11 +9,13 @@ class NameWidget extends StatelessWidget {
     required this.width,
     required this.name,
     required this.githubProfile,
+    required this.linkedinProfile,
   }) : super(key: key);
 
   final double width;
   final String name;
   final String githubProfile;
+  final String linkedinProfile;
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +35,12 @@ class NameWidget extends StatelessWidget {
           const SizedBox(width: 5),
           Image.asset(
             AssetsManager.githubLogo,
+            width: 18,
+            height: 18,
+          ),
+          const SizedBox(width: 5),
+          Image.asset(
+            AssetsManager.linkedinLogo,
             width: 18,
             height: 18,
           ),
