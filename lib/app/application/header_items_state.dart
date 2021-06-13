@@ -43,7 +43,7 @@ final indexHeaderProvider = StateNotifierProvider<IndexHeaderState>((_) {
     ),
     HeaderItemUIModel(
       id: _uuid.v4(),
-      title: 'About Us',
+      title: 'About us',
       route: '/about-us',
     ),
     HeaderItemUIModel(

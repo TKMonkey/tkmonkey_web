@@ -1,6 +1,5 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
+import 'package:argo/argo.dart';
 import 'package:tkmonkey_web/config/values/values.dart';
 
 class InfoContactWidget extends StatelessWidget {
@@ -22,8 +21,13 @@ class InfoContactWidget extends StatelessWidget {
           email ? Icons.email_outlined : Icons.location_on_outlined,
           color: kPrimaryColor,
         ),
-        kSpaceSmallHorizontal,
-        Text('dev@tkmonkey.com')
+        kSpaceLittleHorizontal,
+        Text(
+          email ? emailTKM : locationTKM,
+          style: context.textTheme.headline2!.copyWith(
+            color: kPrimaryColor,
+          ),
+        )
       ],
     );
   }

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:argo/argo.dart';
 import 'package:tkmonkey_web/config/values/values.dart';
 
+import 'widgets/info_contact_widget.dart';
+
 class AboutUsPage extends StatelessWidget {
   const AboutUsPage({
     Key? key,
@@ -40,7 +42,12 @@ class AboutUsPage extends StatelessWidget {
                       ),
                       kSpaceBigVertical,
                       Row(
-                        children: [],
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          InfoContactWidget.location(),
+                          kSpaceBigHorizontal,
+                          InfoContactWidget.email(),
+                        ],
                       ),
                     ],
                   ),
