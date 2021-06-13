@@ -3,6 +3,7 @@ import 'package:tkmonkey_web/config/values/values.dart';
 
 import 'avatar_widget.dart';
 import 'bio_widget.dart';
+import 'circular_button_widget.dart';
 import 'name_widget.dart';
 
 class CardPersonWidget extends StatelessWidget {
@@ -44,6 +45,13 @@ class CardPersonWidget extends StatelessWidget {
               linkedinProfile: linkedinProfile,
             ),
             BioWidget(bio: bio),
+            const Expanded(child: SizedBox()),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: CircularButtonWidget(
+                onPressed: () {},
+              ),
+            ),
           ],
         ),
       ),
