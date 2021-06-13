@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tkmonkey_web/app/ui/pages/team/widgets/card_person_widget.dart';
 
 class TeamPage extends StatelessWidget {
   const TeamPage({
@@ -9,7 +10,13 @@ class TeamPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text('Hello New Page'),
+        child: Row(
+          children: [
+            CardPersonWidget(name: 'James Cardona'),
+            SizedBox(width: 20),
+            CardPersonWidget(name: 'Juan Quintero'),
+          ],
+        ),
       ),
     );
   }
