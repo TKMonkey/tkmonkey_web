@@ -9,7 +9,7 @@ class AssetsManager {
   static const imageProfileJames = 'assets/images/profile_james.jpg';
 
   //ICONS
-  static const githubLogo = 'assets/icons/github_logo.png';
-  static const pubLogo = 'assets/icons/pub_logo.png';
-  static const linkedinLogo = 'assets/icons/linkedin_logo.png';
+  static const githubLogo = 'assets/icons/github_logo.svg';
+  static const pubLogo = 'assets/icons/pub_logo.svg';
+  static const linkedinLogo = 'assets/icons/linkedin_logo.svg';
 }

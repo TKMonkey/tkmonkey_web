@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:argo/argo.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tkmonkey_web/config/values/values.dart';
 
 // todo: Link github
@@ -33,13 +34,13 @@ class NameWidget extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 5),
-          Image.asset(
+          SvgPicture.asset(
             AssetsManager.githubLogo,
             width: 18,
             height: 18,
           ),
           const SizedBox(width: 5),
-          Image.asset(
+          SvgPicture.asset(
             AssetsManager.linkedinLogo,
             width: 18,
             height: 18,

@@ -14,7 +14,7 @@ class CircularButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         shape: const CircleBorder(),
         primary: kBlackColor,

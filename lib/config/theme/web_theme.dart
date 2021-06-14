@@ -13,7 +13,7 @@ class WebTheme with IThemeDataRule {
         headline4: headline4.copyWith(fontSize: 28),
         headline5: headline5.copyWith(fontSize: 96),
         subtitle1: subtitle1.copyWith(fontSize: 14),
-        subtitle2: subtitle2.copyWith(fontSize: 13),
+        subtitle2: subtitle2.copyWith(fontSize: 12),
       ),
     );
   }

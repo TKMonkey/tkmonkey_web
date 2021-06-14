@@ -13,14 +13,13 @@ dependencies:
   # UI
   google_fonts: ^2.0.0
   flutter_svg: ^0.21.0-nullsafety.0
+  flip_card: ^0.5.0
+  percent_indicator: ^3.0.1
   argo:
     git:
       url: git://github.com/jamescardona11/argo.git
       ref: dev
-  tale_drawer:
-    git:
-      url: git://github.com/tkmonkey/tale_drawer.git
-      ref: main
+  
 
 
   #State management

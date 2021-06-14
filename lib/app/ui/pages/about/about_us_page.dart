@@ -18,7 +18,7 @@ class AboutUsPage extends StatelessWidget {
               width: context.widthPct(50),
               height: context.heightPct(50),
               decoration: BoxDecoration(
-                  color: kLightGrayColor3,
+                  color: kLightGrayColor,
                   borderRadius: BorderRadius.circular(30)),
               child: Padding(
                 padding: const EdgeInsets.all(2 * kSpaceBig),

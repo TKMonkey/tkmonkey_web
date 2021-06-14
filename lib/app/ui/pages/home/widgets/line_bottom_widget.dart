@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:argo/argo.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tkmonkey_web/config/values/values.dart';
 
 class LineBottomWidget extends StatelessWidget {
@@ -45,16 +46,17 @@ class LineBottomWidget extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image.asset(AssetsManager.githubLogo,
-                            width: 30, height: 30),
+                        SvgPicture.asset(
+                          AssetsManager.githubLogo,
+                          width: 30,
+                          height: 30,
+                        ),
                         const SizedBox(width: 10),
-                        Image.asset(AssetsManager.pubLogo,
-                            width: 30, height: 30),
-                        // SvgPicture.asset(
-                        //   AssetsManager.imageLogoApp,
-                        //   width: 25,
-                        //   height: 25,
-                        // ),
+                        SvgPicture.asset(
+                          AssetsManager.pubLogo,
+                          width: 30,
+                          height: 30,
+                        ),
                       ],
                     ),
                   ),
