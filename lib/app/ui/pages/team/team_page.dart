@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:tkmonkey_web/app/ui/core/uimodels/percent_skill_uim.dart';
 import 'package:tkmonkey_web/app/ui/pages/team/widgets/card_person_widget.dart';
 
+import 'widgets/custom_james_widget.dart';
+
 class TeamPage extends StatelessWidget {
   const TeamPage({
     Key? key,
@@ -24,7 +26,9 @@ class TeamPage extends StatelessWidget {
                 PercentSkillUIModel(80, 'Flutter'),
                 PercentSkillUIModel(65, 'Android'),
                 PercentSkillUIModel(75, 'Leadership'),
+                PercentSkillUIModel(55, 'Node.js'),
               ],
+              freeWidget: const CustomJamesWidget(),
             ),
             const SizedBox(width: 20),
             CardPersonWidget(
@@ -36,6 +40,7 @@ class TeamPage extends StatelessWidget {
                 PercentSkillUIModel(80, 'Android'),
                 PercentSkillUIModel(65, 'Flutter'),
                 PercentSkillUIModel(78, 'Nodejs'),
+                PercentSkillUIModel(82, 'GCP'),
               ],
             ),
           ],

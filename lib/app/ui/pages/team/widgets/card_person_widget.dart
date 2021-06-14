@@ -18,6 +18,7 @@ class CardPersonWidget extends StatelessWidget {
     this.linkedinProfile = '',
     required this.bio,
     required this.percentSkill,
+    this.freeWidget,
   }) : super(key: key);
 
   final String name;
@@ -25,6 +26,7 @@ class CardPersonWidget extends StatelessWidget {
   final String linkedinProfile;
   final String bio;
   final List<PercentSkillUIModel> percentSkill;
+  final Widget? freeWidget;
 
   final flipController = FlipCardController();
 
@@ -49,6 +51,7 @@ class CardPersonWidget extends StatelessWidget {
         color: kLightGrayColor,
         child: _BackCardWidget(
           percentSkill: percentSkill,
+          freeWidget: freeWidget,
         ),
       ),
     );
@@ -130,9 +133,11 @@ class _BackCardWidget extends StatelessWidget {
   const _BackCardWidget({
     Key? key,
     required this.percentSkill,
+    this.freeWidget = const SizedBox(),
   }) : super(key: key);
 
   final List<PercentSkillUIModel> percentSkill;
+  final Widget? freeWidget;
 
   @override
   Widget build(BuildContext context) {
@@ -140,15 +145,20 @@ class _BackCardWidget extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: LayoutBuilder(
         builder: (context, constraints) => Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Text('Skills', style: Theme.of(context).textTheme.headline2),
+            kSpaceSmallVertical,
             ListView.builder(
-              itemCount: percentSkill.length > 3 ? 3 : percentSkill.length,
+              itemCount: percentSkill.length > 4 ? 4 : percentSkill.length,
               shrinkWrap: true,
               itemBuilder: (context, index) => PercentSkillWidget(
                 percentSkilll: percentSkill[index],
                 width: constraints.maxWidth * 0.8,
               ),
-            )
+            ),
+            kSpaceSmallVertical,
+            freeWidget!,
           ],
         ),
       ),
