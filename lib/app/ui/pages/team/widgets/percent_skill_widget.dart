@@ -17,32 +17,35 @@ class PercentSkillWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = context.textTheme;
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          percentSkilll.skill,
-          style: textTheme.headline2!.copyWith(
-            fontSize: 13,
-          ),
-        ),
-        kSpaceLittleVertical,
-        LinearPercentIndicator(
-          width: width,
-          lineHeight: 10.0,
-          trailing: Text(
-            '${percentSkilll.percent} %',
-            style: textTheme.subtitle2!.copyWith(
-              color: kPrimaryColor,
+    return Padding(
+      padding: const EdgeInsets.only(top: kSpaceLittle),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            percentSkilll.skill,
+            style: textTheme.headline2!.copyWith(
+              fontSize: 12,
             ),
           ),
-          percent: percentSkilll.percent / 100,
-          linearStrokeCap: LinearStrokeCap.roundAll,
-          backgroundColor: kBlackColor,
-          progressColor: kPrimaryColor,
-        ),
-        kSpaceLittleVertical,
-      ],
+          kSpaceLittleVertical,
+          LinearPercentIndicator(
+            width: width,
+            lineHeight: 8.0,
+            trailing: Text(
+              '${percentSkilll.percent} %',
+              style: textTheme.subtitle2!.copyWith(
+                color: kPrimaryColor,
+                fontSize: 10,
+              ),
+            ),
+            percent: percentSkilll.percent / 100,
+            linearStrokeCap: LinearStrokeCap.roundAll,
+            backgroundColor: kBlackColor,
+            progressColor: kPrimaryColor,
+          ),
+        ],
+      ),
     );
   }
 }

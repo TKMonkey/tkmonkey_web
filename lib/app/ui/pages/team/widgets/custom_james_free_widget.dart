@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:argo/argo.dart';
 import 'package:tkmonkey_web/config/values/values.dart';
 
-class CustomJamesWidget extends StatelessWidget {
-  const CustomJamesWidget({
+class AboutJamesWidget extends StatelessWidget {
+  const AboutJamesWidget({
     Key? key,
   }) : super(key: key);
 
@@ -59,7 +59,7 @@ class _ThingsAboutMeWidget extends StatelessWidget {
         Text(
           description,
           style: textTheme.headline2!.copyWith(
-            fontSize: 12,
+            fontSize: 11,
           ),
         ),
       ],

@@ -2,6 +2,7 @@ import 'package:flip_card/flip_card_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:tkmonkey_web/app/ui/core/uimodels/percent_skill_uim.dart';
+import 'package:tkmonkey_web/app/ui/core/uimodels/team_member_uim.dart';
 import 'package:tkmonkey_web/app/ui/pages/team/widgets/percent_skill_widget.dart';
 import 'package:tkmonkey_web/config/values/values.dart';
 
@@ -13,20 +14,10 @@ import 'name_widget.dart';
 class CardPersonWidget extends StatelessWidget {
   CardPersonWidget({
     Key? key,
-    required this.name,
-    required this.githubProfile,
-    this.linkedinProfile = '',
-    required this.bio,
-    required this.percentSkill,
-    this.freeWidget,
+    required this.member,
   }) : super(key: key);
 
-  final String name;
-  final String githubProfile;
-  final String linkedinProfile;
-  final String bio;
-  final List<PercentSkillUIModel> percentSkill;
-  final Widget? freeWidget;
+  final TeamMemberUIModel member;
 
   final flipController = FlipCardController();
 
@@ -38,23 +29,26 @@ class CardPersonWidget extends StatelessWidget {
       front: _BackgroundCardWidget(
         color: kWhiteColor,
         child: _FrontCardWidget(
-          name: name,
-          githubProfile: githubProfile,
-          bio: bio,
-          linkedinProfile: linkedinProfile,
-          onRotatePress: () {
-            flipController.toggleCard();
-          },
+          name: member.name,
+          githubProfile: member.githubProfile,
+          bio: member.bio,
+          linkedinProfile: member.linkedinProfile,
+          onRotatePress: _toggleCard,
         ),
       ),
       back: _BackgroundCardWidget(
         color: kLightGrayColor,
         child: _BackCardWidget(
-          percentSkill: percentSkill,
-          freeWidget: freeWidget,
+          percentSkill: member.percentSkill,
+          freeWidget: member.freeWidget,
+          onRotatePress: _toggleCard,
         ),
       ),
     );
+  }
+
+  void _toggleCard() {
+    flipController.toggleCard();
   }
 }
 
@@ -103,24 +97,31 @@ class _FrontCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
-      builder: (context, constraints) => Column(
+      builder: (context, constraints) => Stack(
         children: [
-          AvatarWidget(
-            width: constraints.maxWidth,
-            height: constraints.maxHeight / 2,
+          Column(
+            children: [
+              AvatarWidget(
+                width: constraints.maxWidth,
+                height: constraints.maxHeight / 2,
+              ),
+              NameWidget(
+                width: constraints.maxWidth,
+                name: name,
+                githubProfile: githubProfile,
+                linkedinProfile: linkedinProfile,
+              ),
+              BioWidget(bio: bio),
+              const Expanded(child: SizedBox()),
+            ],
           ),
-          NameWidget(
-            width: constraints.maxWidth,
-            name: name,
-            githubProfile: githubProfile,
-            linkedinProfile: linkedinProfile,
-          ),
-          BioWidget(bio: bio),
-          const Expanded(child: SizedBox()),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: CircularButtonWidget(
-              onPressed: onRotatePress,
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: CircularButtonWidget(
+                onPressed: onRotatePress,
+              ),
             ),
           ),
         ],
@@ -133,32 +134,49 @@ class _BackCardWidget extends StatelessWidget {
   const _BackCardWidget({
     Key? key,
     required this.percentSkill,
+    required this.onRotatePress,
     this.freeWidget = const SizedBox(),
   }) : super(key: key);
 
   final List<PercentSkillUIModel> percentSkill;
-  final Widget? freeWidget;
+  final Widget freeWidget;
+  final VoidCallback onRotatePress;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: LayoutBuilder(
-        builder: (context, constraints) => Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        builder: (context, constraints) => Stack(
           children: [
-            Text('Skills', style: Theme.of(context).textTheme.headline2),
-            kSpaceSmallVertical,
-            ListView.builder(
-              itemCount: percentSkill.length > 4 ? 4 : percentSkill.length,
-              shrinkWrap: true,
-              itemBuilder: (context, index) => PercentSkillWidget(
-                percentSkilll: percentSkill[index],
-                width: constraints.maxWidth * 0.8,
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Skills', style: Theme.of(context).textTheme.headline2),
+                kSpaceSmallVertical,
+                ListView.builder(
+                  itemCount: percentSkill.length > 4 ? 4 : percentSkill.length,
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) => PercentSkillWidget(
+                    percentSkilll: percentSkill[index],
+                    width: constraints.maxWidth * 0.8,
+                  ),
+                ),
+                kSpaceSmallVertical,
+                freeWidget,
+              ],
+            ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CircularButtonWidget(
+                  onPressed: onRotatePress,
+                  mainColor: kWhiteColor,
+                  iconColor: kBlackColor,
+                ),
               ),
             ),
-            kSpaceSmallVertical,
-            freeWidget!,
           ],
         ),
       ),

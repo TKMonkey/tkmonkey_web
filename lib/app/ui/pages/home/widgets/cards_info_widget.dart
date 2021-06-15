@@ -69,7 +69,7 @@ class _CardHomePage extends StatelessWidget {
       child: Container(
         height: 60,
         width: context.widthPx < 450 ? context.widthPx : 230,
-        margin: const EdgeInsets.symmetric(horizontal: kSpaceSmall),
+        margin: const EdgeInsets.symmetric(horizontal: kSpaceMedium),
         child: Row(
           children: [
             Container(
@@ -83,7 +83,7 @@ class _CardHomePage extends StatelessWidget {
                 color: kCreamColor,
               ),
             ),
-            kSpaceSmallHorizontal,
+            kSpaceMediumHorizontal,
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,

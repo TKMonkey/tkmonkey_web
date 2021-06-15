@@ -6,10 +6,14 @@ class CircularButtonWidget extends StatelessWidget {
     Key? key,
     required this.onPressed,
     this.size = 30,
+    this.mainColor = kBlackColor,
+    this.iconColor = kWhiteColor,
   }) : super(key: key);
 
   final VoidCallback onPressed;
   final double size;
+  final Color mainColor;
+  final Color iconColor;
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +21,14 @@ class CircularButtonWidget extends StatelessWidget {
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         shape: const CircleBorder(),
-        primary: kBlackColor,
+        primary: mainColor,
       ),
       child: SizedBox(
         width: size,
         height: size,
         child: Icon(
           Icons.rotate_left,
-          color: kWhiteColor,
+          color: iconColor,
           size: size * 2 / 3,
         ),
       ),
