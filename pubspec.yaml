@@ -36,6 +36,11 @@ dependencies:
   get_it: ^6.0.0
 
 
+  #Network
+  dio: ^4.0.0
+  flutter_dotenv: ^5.0.0
+
+
 
 
 dev_dependencies:
@@ -48,6 +53,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+    - .env
     - assets/icons/
     - assets/images/
 

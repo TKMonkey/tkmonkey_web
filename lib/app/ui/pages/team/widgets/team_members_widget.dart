@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:tkmonkey_web/app/application/team_members_state.dart';
+import 'package:tkmonkey_web/app/application/team_members_riverpod.dart';
 import 'package:tkmonkey_web/config/values/dimens.dart';
 
 import 'card_person_widget.dart';

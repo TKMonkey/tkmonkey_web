@@ -11,8 +11,15 @@ class TKMonkeyRepository implements ITKMonkeyRepository {
   TKMonkeyRepository(this.dataSource);
 
   @override
-  Future<WorkModel> requestWorkFronNotion() {
-    // TODO: implement requestWorkFronNotion
-    throw UnimplementedError();
+  Future<WorkModel> requestWorkFronNotion() async {
+    final response = await dataSource.getWorkFromNotion();
+
+    return WorkModel(
+      name: '',
+      description: '',
+      cover: '',
+      category: '',
+      link: '',
+    );
   }
 }
