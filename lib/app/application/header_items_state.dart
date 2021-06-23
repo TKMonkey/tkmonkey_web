@@ -44,12 +44,12 @@ final indexHeaderProvider = StateNotifierProvider<IndexHeaderState>((_) {
     HeaderItemUIModel(
       id: _uuid.v4(),
       title: 'About us',
-      route: '/about-us',
+      route: '/aboutus',
     ),
     HeaderItemUIModel(
       id: _uuid.v4(),
-      title: 'Get In Touch',
-      route: '/getintouch',
+      title: 'Contact us',
+      route: '/contactus',
     )
   ]);
 });

@@ -3,6 +3,7 @@ import 'package:tkmonkey_web/app/ui/core/widgets/header_widget.dart';
 import 'package:tkmonkey_web/app/ui/pages/about/about_us_page.dart';
 import 'package:tkmonkey_web/app/ui/pages/home/home_page.dart';
 import 'package:tkmonkey_web/app/ui/pages/team/team_page.dart';
+import 'package:tkmonkey_web/app/ui/pages/work/work_page.dart';
 
 import 'widgets/tkm_title_appbar.dart';
 
@@ -17,11 +18,12 @@ class IndexPage extends StatelessWidget {
       body: Stack(
         children: [
           IndexedStack(
-            index: 2,
+            index: 3,
             children: [
               HomePage(),
               AboutUsPage(),
               TeamPage(),
+              WorkPage(),
             ],
           ),
           const TKMTitleWidget(),

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:argo/argo.dart';
 import 'package:tkmonkey_web/config/values/values.dart';
 
-class AboutJamesWidget extends StatelessWidget {
-  const AboutJamesWidget({
+class CustomJamesFreeWidget extends StatelessWidget {
+  const CustomJamesFreeWidget({
     Key? key,
   }) : super(key: key);
 

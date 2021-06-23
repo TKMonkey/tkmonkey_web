@@ -16,7 +16,7 @@ final teamMemberProvider = Provider((ref) => [
           PercentSkillUIModel(75, 'Leadership'),
           PercentSkillUIModel(55, 'Node.js'),
         ],
-        freeWidget: const AboutJamesWidget(),
+        freeWidget: const CustomJamesFreeWidget(),
       ),
       TeamMemberUIModel(
         name: 'Juan Quintero',
