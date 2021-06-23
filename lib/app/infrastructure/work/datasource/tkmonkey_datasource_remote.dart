@@ -1,3 +1,3 @@
-abstract class WordDatasourceRemote {
+abstract class TKMDatasourceRemote {
   Future<dynamic> getWorkFromNotion();
 }

@@ -31,6 +31,10 @@ dependencies:
   uuid: ^3.0.1
   freezed_annotation: ^0.14.0
 
+  #Dependency Injection
+  injectable: ^1.2.2
+  get_it: ^6.0.0
+
 
 
 
