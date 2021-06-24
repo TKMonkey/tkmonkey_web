@@ -6,8 +6,8 @@ import 'package:uuid/uuid.dart';
 
 const _uuid = Uuid();
 
-class IndexHeaderState extends StateNotifier<List<HeaderItemUIModel>> {
-  IndexHeaderState([List<HeaderItemUIModel>? initialState])
+class IndexHeaderNotifier extends StateNotifier<List<HeaderItemUIModel>> {
+  IndexHeaderNotifier([List<HeaderItemUIModel>? initialState])
       : super(initialState ?? []);
 
   void toggle(String id) {
@@ -23,8 +23,8 @@ class IndexHeaderState extends StateNotifier<List<HeaderItemUIModel>> {
   List<HeaderItemUIModel> get currentState => state;
 }
 
-final indexHeaderProvider = StateNotifierProvider<IndexHeaderState>((_) {
-  return IndexHeaderState([
+final indexHeaderProvider = StateNotifierProvider<IndexHeaderNotifier>((_) {
+  return IndexHeaderNotifier([
     HeaderItemUIModel(
       id: _uuid.v4(),
       title: 'Home',

@@ -4,14 +4,14 @@ import 'package:tkmonkey_web/app/domain/work_model.dart';
 part 'work_state.freezed.dart';
 
 @freezed
-class WorkState with _$WorkState {
-  const factory WorkState({
+class WorkRiverpodState with _$WorkRiverpodState {
+  const factory WorkRiverpodState({
     required List<WorkModel> list,
     required bool loading,
     required bool showError,
-  }) = _WorkState;
+  }) = _WorkRiverpodState;
 
-  factory WorkState.initial() => const WorkState(
+  factory WorkRiverpodState.initial() => const WorkRiverpodState(
         list: [],
         loading: false,
         showError: false,

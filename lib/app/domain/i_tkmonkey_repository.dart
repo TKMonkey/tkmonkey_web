@@ -1,5 +1,7 @@
+import 'package:dartz/dartz.dart';
+
 import 'work_model.dart';
 
 abstract class ITKMonkeyRepository {
-  Future<WorkModel> requestWorkFronNotion();
+  Future<Option<List<WorkModel>>> requestWorkFronNotion();
 }

@@ -13,14 +13,14 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-class _$WorkStateTearOff {
-  const _$WorkStateTearOff();
+class _$WorkRiverpodStateTearOff {
+  const _$WorkRiverpodStateTearOff();
 
-  _WorkState call(
+  _WorkRiverpodState call(
       {required List<WorkModel> list,
       required bool loading,
       required bool showError}) {
-    return _WorkState(
+    return _WorkRiverpodState(
       list: list,
       loading: loading,
       showError: showError,
@@ -29,33 +29,35 @@ class _$WorkStateTearOff {
 }
 
 /// @nodoc
-const $WorkState = _$WorkStateTearOff();
+const $WorkRiverpodState = _$WorkRiverpodStateTearOff();
 
 /// @nodoc
-mixin _$WorkState {
+mixin _$WorkRiverpodState {
   List<WorkModel> get list => throw _privateConstructorUsedError;
   bool get loading => throw _privateConstructorUsedError;
   bool get showError => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $WorkStateCopyWith<WorkState> get copyWith =>
+  $WorkRiverpodStateCopyWith<WorkRiverpodState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $WorkStateCopyWith<$Res> {
-  factory $WorkStateCopyWith(WorkState value, $Res Function(WorkState) then) =
-      _$WorkStateCopyWithImpl<$Res>;
+abstract class $WorkRiverpodStateCopyWith<$Res> {
+  factory $WorkRiverpodStateCopyWith(
+          WorkRiverpodState value, $Res Function(WorkRiverpodState) then) =
+      _$WorkRiverpodStateCopyWithImpl<$Res>;
   $Res call({List<WorkModel> list, bool loading, bool showError});
 }
 
 /// @nodoc
-class _$WorkStateCopyWithImpl<$Res> implements $WorkStateCopyWith<$Res> {
-  _$WorkStateCopyWithImpl(this._value, this._then);
+class _$WorkRiverpodStateCopyWithImpl<$Res>
+    implements $WorkRiverpodStateCopyWith<$Res> {
+  _$WorkRiverpodStateCopyWithImpl(this._value, this._then);
 
-  final WorkState _value;
+  final WorkRiverpodState _value;
   // ignore: unused_field
-  final $Res Function(WorkState) _then;
+  final $Res Function(WorkRiverpodState) _then;
 
   @override
   $Res call({
@@ -81,22 +83,25 @@ class _$WorkStateCopyWithImpl<$Res> implements $WorkStateCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$WorkStateCopyWith<$Res> implements $WorkStateCopyWith<$Res> {
-  factory _$WorkStateCopyWith(
-          _WorkState value, $Res Function(_WorkState) then) =
-      __$WorkStateCopyWithImpl<$Res>;
+abstract class _$WorkRiverpodStateCopyWith<$Res>
+    implements $WorkRiverpodStateCopyWith<$Res> {
+  factory _$WorkRiverpodStateCopyWith(
+          _WorkRiverpodState value, $Res Function(_WorkRiverpodState) then) =
+      __$WorkRiverpodStateCopyWithImpl<$Res>;
   @override
   $Res call({List<WorkModel> list, bool loading, bool showError});
 }
 
 /// @nodoc
-class __$WorkStateCopyWithImpl<$Res> extends _$WorkStateCopyWithImpl<$Res>
-    implements _$WorkStateCopyWith<$Res> {
-  __$WorkStateCopyWithImpl(_WorkState _value, $Res Function(_WorkState) _then)
-      : super(_value, (v) => _then(v as _WorkState));
+class __$WorkRiverpodStateCopyWithImpl<$Res>
+    extends _$WorkRiverpodStateCopyWithImpl<$Res>
+    implements _$WorkRiverpodStateCopyWith<$Res> {
+  __$WorkRiverpodStateCopyWithImpl(
+      _WorkRiverpodState _value, $Res Function(_WorkRiverpodState) _then)
+      : super(_value, (v) => _then(v as _WorkRiverpodState));
 
   @override
-  _WorkState get _value => super._value as _WorkState;
+  _WorkRiverpodState get _value => super._value as _WorkRiverpodState;
 
   @override
   $Res call({
@@ -104,7 +109,7 @@ class __$WorkStateCopyWithImpl<$Res> extends _$WorkStateCopyWithImpl<$Res>
     Object? loading = freezed,
     Object? showError = freezed,
   }) {
-    return _then(_WorkState(
+    return _then(_WorkRiverpodState(
       list: list == freezed
           ? _value.list
           : list // ignore: cast_nullable_to_non_nullable
@@ -122,8 +127,8 @@ class __$WorkStateCopyWithImpl<$Res> extends _$WorkStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$_WorkState implements _WorkState {
-  const _$_WorkState(
+class _$_WorkRiverpodState implements _WorkRiverpodState {
+  const _$_WorkRiverpodState(
       {required this.list, required this.loading, required this.showError});
 
   @override
@@ -135,13 +140,13 @@ class _$_WorkState implements _WorkState {
 
   @override
   String toString() {
-    return 'WorkState(list: $list, loading: $loading, showError: $showError)';
+    return 'WorkRiverpodState(list: $list, loading: $loading, showError: $showError)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _WorkState &&
+        (other is _WorkRiverpodState &&
             (identical(other.list, list) ||
                 const DeepCollectionEquality().equals(other.list, list)) &&
             (identical(other.loading, loading) ||
@@ -161,15 +166,15 @@ class _$_WorkState implements _WorkState {
 
   @JsonKey(ignore: true)
   @override
-  _$WorkStateCopyWith<_WorkState> get copyWith =>
-      __$WorkStateCopyWithImpl<_WorkState>(this, _$identity);
+  _$WorkRiverpodStateCopyWith<_WorkRiverpodState> get copyWith =>
+      __$WorkRiverpodStateCopyWithImpl<_WorkRiverpodState>(this, _$identity);
 }
 
-abstract class _WorkState implements WorkState {
-  const factory _WorkState(
+abstract class _WorkRiverpodState implements WorkRiverpodState {
+  const factory _WorkRiverpodState(
       {required List<WorkModel> list,
       required bool loading,
-      required bool showError}) = _$_WorkState;
+      required bool showError}) = _$_WorkRiverpodState;
 
   @override
   List<WorkModel> get list => throw _privateConstructorUsedError;
@@ -179,6 +184,6 @@ abstract class _WorkState implements WorkState {
   bool get showError => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$WorkStateCopyWith<_WorkState> get copyWith =>
+  _$WorkRiverpodStateCopyWith<_WorkRiverpodState> get copyWith =>
       throw _privateConstructorUsedError;
 }
