@@ -5,4 +5,4 @@ import 'package:tkmonkey_web/app/infrastructure/tkmonkey_repository.dart';
 final dioProvider = Provider<Dio>((ref) => Dio());
 
 final tkmRepositoryProvider = Provider.autoDispose<TKMonkeyRepository>(
-    (ref) => TKMonkeyRepository(ref.read));
+    (ref) => TKMonkeyRepository(ref.watch(dioProvider)));

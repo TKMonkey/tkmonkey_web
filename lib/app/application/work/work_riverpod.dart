@@ -17,5 +17,5 @@ class WorkNotifier extends StateNotifier<WorkRiverpodState> {
 }
 
 final workProvider = StateNotifierProvider.autoDispose<WorkNotifier>(
-  (ref) => WorkNotifier(ref.read(tkmRepositoryProvider)),
+  (ref) => WorkNotifier(ref.watch(tkmRepositoryProvider)),
 );
